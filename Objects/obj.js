@@ -80,6 +80,35 @@ console.log(obj3)
 console.log(Object.keys(obj1))
 console.log(Object.values(obj1))
 
+N number of argument in function 
 
+function totalPrice(...num){
+    return num;
+}
+console.log(totalPrice(300,400,500));
+//op -> [300,400,500]
+
+//passing object in function 
+
+let divyesh = {
+    name : "divyesh" ,
+    color : "brown" ,
+    CPI : 7.3 ,
+    job : true 
+}
+
+function objectRunner (anydivyesh){
+    console.log(`CPI of ${anydivyesh.name} is ${anydivyesh.CPI} `)
+} 
+
+console.log(objectRunner(divyesh))
+
+let arr = [200,300,400]
+
+function arrRunner (anyArr){
+    return anyArr 
+}
+
+console.log(arrRunner(arr))
 
 
