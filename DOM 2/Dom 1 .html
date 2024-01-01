@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM Learning </title>
+</head>
+<body style="background-color: black; color: white;">
+    <div class="parent">
+        <div class="week">monday</div>
+        <div class="week">tuesday</div>
+        <div class="week">wednesday</div>
+        <div class="week">thursday</div>
+        <div class="week">adding Node</div>
+    </div>
+</body>
+
+<script>
+
+const parent = document.querySelector(".parent")
+console.log(parent.children);
+
+console.log(parent.children[0].innerHTML);   //MONDAY
+
+// for (let i = 0; parent.children.length; i++) {
+//     //parent.children[i].style.color = "red";
+//     console.log(parent.children[i].innerHTML)
+// }
+
+parent.children[0].style.color = "red";
+
+// first and last element of parent 
+
+console.log(parent.firstElementChild.innerHTML)
+console.log(parent.lastElementChild.innerHTML)
+
+
+//Move to parent element from child  via --->> child.parentElement
+
+const child = parent.firstElementChild
+console.log(child)
+
+console.log(child.parentElement.innerText)
+
+//move to sibling element via --->>  child.NextElementSibling
+
+console.log(child.nextElementSibling , child.nextElementSibling.innerHTML)     //tuesday
+
+
+//imp --> childNodes --> gives all the Nodes of asked parent
+
+console.log("Nodes are : " , parent.childNodes)  // gives 11 nodes 
+
+</script>
+</html>
+
+ <!--
+
+   detailed overview of each node present in code 
+
+
+
+This JavaScript code is working with the Document Object Model (DOM) to manipulate HTML elements within an HTML document. Let's break down the code and explain each part:
+
+1. **Selecting the Parent Element:**
+   ```javascript
+   const parent = document.querySelector(".parent");
+   ```
+   - This line selects the HTML element with the class "parent" and assigns it to the variable `parent`. The `document.querySelector` method is used to find the first element that matches the specified CSS selector.
+
+2. **Accessing Child Elements:**
+   ```javascript 
+   console.log(parent.children);
+   console.log(parent.children[0].innerHTML);
+   ```
+   - The first `console.log` statement prints an HTMLCollection of child elements of the `parent` element.
+   - The second `console.log` statement prints the inner HTML content of the first child element.
+
+3. **Styling the First Child:**
+   ```javascript
+   parent.children[0].style.color = "red";
+   ```
+   - This line sets the text color of the first child element of the `parent` to red.
+
+4. **Accessing First and Last Child Elements:**
+   ```javascript
+   console.log(parent.firstElementChild.innerHTML);
+   console.log(parent.lastElementChild.innerHTML);
+   ```
+   - These lines print the inner HTML content of the first and last child elements of the `parent`, respectively.
+
+5. **Moving to Parent Element from Child:**
+   ```javascript
+   const child = parent.firstElementChild;
+   console.log(child.parentElement.innerText);
+   ```
+   - This code snippet selects the first child element of the `parent` and then prints the inner text of its parent element.
+
+6. **Moving to Sibling Element:**
+   ```javascript
+   console.log(child.nextElementSibling, child.nextElementSibling.innerHTML);
+   ```
+   - This line prints information about the next sibling of the `child` element, including its inner HTML content.
+
+7. **Accessing All Nodes of the Parent:**
+   ```javascript
+   console.log("Nodes are: ", parent.childNodes);
+   ```
+   - This line prints all nodes (including text nodes, element nodes, etc.) that are children of the `parent` element. It's important to note that `childNodes` includes all nodes, not just elements, and might contain whitespace text nodes.
+
+It's worth mentioning that the commented-out `for` loop in the code was likely intended to iterate through all the child elements of the `parent`, but it contains a small error. The loop condition should be `i < parent.children.length` instead of `i < parent.children.length`.
+
+
+/>

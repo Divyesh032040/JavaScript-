@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom create new Ele</title>
+</head>
+<body style="background-color: black; color: white;">
+    
+</body>
+
+<script>
+
+//create new div
+
+const div = document.createElement('div');
+
+console.log(div);
+
+//adding id , class , title , attribute , text , style (padding , color etc) in our div 
+
+div.className = "myDiv";
+div.id = Math.random()*10;
+
+div.setAttribute("title" , "My div title" )
+
+div.innerText = "thi is my new div through Document object modal"
+
+div.style.padding = "30px" 
+div.style.backgroundColor = "red";
+
+
+//attaching our div with document 
+
+document.body.appendChild(div)    //now this div will show in browser
+
+// document.body.style.margin = "0px"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
