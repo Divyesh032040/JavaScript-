@@ -6,7 +6,13 @@
     <title>Dom create new Ele</title>
 </head>
 <body style="background-color: black; color: white;">
-    
+
+
+<ul class="Language">
+    <li>Java script</li>
+</ul>
+
+
 </body>
 
 <script>
@@ -39,26 +45,50 @@ document.body.appendChild(div)    //now this div will show in browser
 
 
 
+// function to add any new element in list 
+
+function addLanguage (LangName) {
+    var li = document.createElement('li');                //create new list 
+    li.innerHTML = `${LangName}` ;                        //add input text inside new list 
+    var myList = document.querySelector(".Language")      //select unordered list by using querySelector and store in myList 
+    myList.appendChild(li)                               //store new list inside unordered list 
+}
+
+addLanguage("c plus plus")
+addLanguage("Python")
+addLanguage("React.js")  
+
+/* same function but optimized because while appendChild , in back-round its need to travel through
+ all list of unordered list and than its append at lat so in this optimized way , we create new text 
+ node which append at last  */
 
 
+function optimizeAddLanguage (LangName) {
+       const li = document.createElement("li");
+       li.appendChild(document.createTextNode(LangName));
+       document.querySelector(".Language").append(li)
+}
+
+optimizeAddLanguage("ruby")
+optimizeAddLanguage(".Net")
 
 
+//Edit this list 
+
+const secLanguage = document.querySelector("li:nth-child(2)");  //target 2nd child of list
+//secondLanguage.innerHTML = "mojo";
+const newLi = document.createElement("li")
+newLi.textContent = "mojo";
+secLanguage.replaceWith(newLi);    //we change python with ruby
+
+const firstLang = document.querySelector("li:first-child")
+firstLang.outerHTML = "<li> TypeScript </li>";   //change java script with typescript 
 
 
+ // remove 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+const LatLanguage = document.querySelector("li:last-child");
+LatLanguage.remove()
 
 </script>
 
