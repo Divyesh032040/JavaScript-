@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing Functions</title>
+</head>
+<body>
+    <div class="buttons">
+        <button class="start"> Start </button>
+        <button class="stop" > Stop </button>
+    </div>
+
+    <script>
+        const start = document.querySelector('.start');
+        const stop = document.querySelector('.stop');
+
+        let intervalId;  // Variable to store the interval ID
+
+        const abc = function printer() {
+            console.log("apple", Date.now());
+        }
+
+        start.addEventListener('click', function () {
+            console.log("Start");
+            abc();  // Log "apple" immediately when Start is clicked
+            intervalId = setInterval(abc, 2000);  // Start the interval
+        });
+
+        stop.addEventListener('click', function () {
+            console.log("Stop");
+            clearInterval(intervalId);  // Stop the interval when Stop is clicked
+        });
+    </script>
+</body>
+</html>
