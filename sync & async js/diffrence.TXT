@@ -1,0 +1,22 @@
+* Synchronous (Sync) JavaScript:
+
+ -> In synchronous code, tasks are executed one after the other in a sequential manner.
+Each task must finish before the next one starts.
+
+ -> If there's a time-consuming operation (like fetching data from a server), the entire execution is blocked until that operation is completed.
+
+ -> Synchronous code is straightforward to read and understand, but it can lead to a slower user experience if tasks take a significant amount of time
+
+
+* Asynchronous (Async) JavaScript:
+
+ 
+ -> In asynchronous code, tasks are initiated, but the execution doesn't wait for them to complete. Instead, it continues with the next tasks.
+
+ -> Callback functions or Promises are used to handle the completion of asynchronous tasks.
+
+  -> Asynchronous code is beneficial for handling operations that may take time (e.g., fetching data) without blocking the entire execution.
+
+  -> It's commonly used in scenarios like AJAX requests, file reading, and other non-blocking operations
+
+  

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    
+</body>
+
+<script>
+  const xhr = new XMLHttpRequest();
+  const requestURL = 'https://randomuser.me/api';
+
+  // API CALL using XMLHttpRequest
+  xhr.open('GET' , requestURL)
+  //readyState represents the state of the XMLHttpRequest's lifecycle
+  console.log(xhr.readyState)   
+   //tracking ready state continually 
+  xhr.onreadystatechange = function(){   
+       console.log(xhr.readyState)
+       if(xhr.readyState === 4 ){
+        //convert into JSON data type and in string
+        const data = JSON.parse(this.responseText);
+        console.log( data);
+        console.log(data.followers);
+       }
+  }
+ xhr.send()
+
+</script>
+</html>
+
+
+<!-- xhr.open(method, url, async) - Initializing the Request:
+
+The open() method is like setting up the parameters for the HTTP request you're about to make.
+
+xhr.send() - Initiating the Request:
+
+Once you have set up the request parameters with open(), the send() method is used to actually send the request to the server.
+
+Handling the Response:
+
+After calling send(), you often set up an event listener, such as xhr.onreadystatechange, to monitor changes in the XMLHttpRequest's state.
+When the state becomes 4 (indicating that the operation is complete) and the status is 200 (indicating a successful response), you can then access the response data using properties like xhr.responseText or xhr.responseXML.
+-->

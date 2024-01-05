@@ -1,0 +1,24 @@
+XMLHttpRequest (XHR) objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.
+
+
+XMLHttpRequest is async -> XMLHttpRequest in JavaScript is typically used asynchronously. It was designed to perform asynchronous operations, allowing web pages to make requests to a server and continue executing other tasks without waiting for the response
+
+Despite its name, XMLHttpRequest can be used to retrieve any type of data, not just XML
+
+XML -> In the context of XMLHttpRequest, XML (eXtensible Markup Language) refers to the format in which data is often sent or received. XMLHttpRequest is a JavaScript object that is commonly used to make asynchronous HTTP requests to a server. While the name suggests XML, it's important to note that XMLHttpRequest is not limited to working with XML data. The term has historical significance as it was commonly used for fetching XML data in the early days of web development.
+
+PERFORMING A TASK :
+
+The constructor initializes an XMLHttpRequest. It must be called before any other method calls.
+
+1 : XMLHttpRequest.readyState -> Returns a number representing the state of the request.
+
+Value           State 	                                 Description
+ 0        	   UNSENT 	               Client has been created. open() not called yet.
+ 1 	           OPENED 	                            open() has been called.
+ 2        	HEADERS_RECEIVED      send() has been called, and headers and status are available.
+ 3             LOADING 	                         Downloading; responseText holds partial data.
+ 4   	        DONE 	                              The operation is complete
+
+
+
