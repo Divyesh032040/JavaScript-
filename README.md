@@ -26,3 +26,8 @@ Welcome to my JavaScript Code Repository! 🚀 Here, I share and organize my col
 Your feedback is valuable! If you have suggestions, bug reports, or want to contribute, please open an issue or submit a pull request. Let's collaborate and build a vibrant JavaScript community!
 
 Happy coding! 🚀📜
+
+
+![javascript-illustration](https://github.com/Divyesh032040/JavaScript-/assets/127118175/7ef68122-7d56-42f5-8523-aa0ede575b99)
+
+
